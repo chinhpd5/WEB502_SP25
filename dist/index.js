@@ -21,6 +21,19 @@ if (myGender) {
 else {
     console.log('Nữ');
 }
+// function 
+function sayHello(name) {
+    return `Xin chào ${name}`;
+}
+// console.log(sayHello('chinhpd5'));
+let sayHello1 = function (name) {
+    console.log(`Chào mừng bạn ${name}`);
+};
+// sayHello1("chinhpd5")
+let sayHello2 = (age) => {
+    return `Bạn ${age} tuổi`;
+};
+// console.log(sayHello2(20));
 /**
  * 1. Viết 1 hàm trả về chu vi và diện tích hình chữ nhật
  * 2. Viết 1 hàm tính tổng nhiều số (không biết trước số lượng tham số), sử dụng rest parameter
