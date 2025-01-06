@@ -5,4 +5,20 @@
 // tsc -w
 // tạo file index.html
 // link dist/index.js vào index.html
-console.log("chinhpd5");
+//string
+let myName = "Chinhpd5";
+let myHome = 'Hà Nội';
+let greeting = `Chào mừng bạn ${myName}`;
+// console.log(greeting.toLowerCase());
+//number
+let myAge = 30;
+let price = 2.44444;
+// console.log(price.toFixed(2));
+//boolean
+let myGender = true;
+if (myGender) {
+    console.log('Nam');
+}
+else {
+    console.log('Nữ');
+}
