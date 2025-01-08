@@ -20,13 +20,13 @@ let price: number = 1.222;
 // boolean
 let myGender: boolean= true;
 
-if(myGender){
-    console.log("Nam");
+// if(myGender){
+//     console.log("Nam");
     
-}else{
-    console.log('Nữ');
+// }else{
+//     console.log('Nữ');
     
-}
+// }
 
 // function 
 function sayHello(name:string):string {
@@ -53,6 +53,64 @@ let sayHello2 = (age:number):string =>{
  * 3. Viết hàm trả về số lượng xuất hiện của 1 kí tự trong chuỗi
  * 4. Viết hàm trả về boolean kiểm tra 1 số có phải số nguyên tố
  */
+
+// 1
+
+function question1(a: number, b: number): string {
+    return `Chu vi: ${(a+b)*2}, diện tích: ${a*b}`
+}
+
+// console.log(question1(2,3));
+
+//2
+// spread (...)
+
+function sum(...rest: number[]): number{
+    // console.log(rest);
+
+    let total: number = 0;
+    rest.forEach((item: number)=>{
+        // console.log(item);
+        total += item;
+    })
+    
+    return total;
+}
+
+// console.log(sum(1,2,3,4));
+// console.log(sum(1,2,3,4,5,6,7));
+
+// 3
+function countLetter(text: string, letter: string): number {
+    let count: number = 0;
+
+    for(let i: number = 0; i < text.length ; i++){
+        if(text[i] == letter){
+            count++;
+        }
+    }
+
+    return count;
+}
+
+// console.log(countLetter("xin chao cac ban","n"));
+
+function nguyenTo(num: number): boolean {
+    if(num < 0)
+        return false;
+    if(num <= 2)
+        return true;
+    for(let i: number = 2; i <= Math.sqrt(num); i++){
+        if(num % i == 0){
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(nguyenTo(9));
+
+
 
 
 
