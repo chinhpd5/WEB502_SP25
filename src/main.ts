@@ -118,6 +118,18 @@ let PostSts: Status<{title: string, price: number, sale?: boolean}>={
     status: false
 }
 
+// Enum
+enum Sts {
+    Success= 'SUCCESS',
+    Warning = 'WARNING',
+    Error = 'ERROR'
+}
+
+console.log(Sts.Success);
+console.log(Sts.Warning);
+console.log(Sts.Error);
+
+
 /**
  * Tạo type Product có các trường sau:
  * name: string

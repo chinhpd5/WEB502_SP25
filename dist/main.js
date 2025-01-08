@@ -68,6 +68,16 @@ let PostSts = {
     },
     status: false
 };
+// Enum
+var Sts;
+(function (Sts) {
+    Sts["Success"] = "SUCCESS";
+    Sts["Warning"] = "WARNING";
+    Sts["Error"] = "ERROR";
+})(Sts || (Sts = {}));
+console.log(Sts.Success);
+console.log(Sts.Warning);
+console.log(Sts.Error);
 /**
  * Tạo type Product có các trường sau:
  * name: string
