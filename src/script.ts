@@ -47,4 +47,15 @@ type RGB = [number,number,number];
 let black: RGB = [0,0,0]
 let white: RGB = [255,255,255]
 
+// union
+let myUnion: number|string = 30;
+myUnion = "chinhpd"
+
+let myArray4: string[]|number[] = [1,2,3,4];
+myArray4 = ["a","b","c"]
+
+let myArray5: (string|number)[] = [1,"a",2, "b"];
+
+function test(variable: string|number|boolean): string|void{}
+
 

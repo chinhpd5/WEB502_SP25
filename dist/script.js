@@ -25,3 +25,10 @@ function hcn(a, b) {
 let result = hcn(5, 6);
 let black = [0, 0, 0];
 let white = [255, 255, 255];
+// union
+let myUnion = 30;
+myUnion = "chinhpd";
+let myArray4 = [1, 2, 3, 4];
+myArray4 = ["a", "b", "c"];
+let myArray5 = [1, "a", 2, "b"];
+function test(variable) { }
