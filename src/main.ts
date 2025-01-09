@@ -54,7 +54,58 @@ let sayHello3 = (home:string): string =>{
  * 4. Viết hàm trả về boolean kiểm tra 1 số có phải số nguyên tố
  */
 
+// Câu 1:
+function question1(a: number, b: number): string{
+    return `Chu vi: ${(a+b)*2}, Diện tích: ${a*b}`
+}
+
+// console.log(question1(3,5));
+
+// Câu 2:
+function question2(...rest: number[]): number{
+    // console.log(rest);
+    let total: number = 0;
+    rest.forEach((item: number)=>{
+        // console.log(item);
+        total += item;
+    })
+
+    return total;
+}
+
+// console.log(question2(1,2,3,4,5));
+// console.log(question2(1,2,3,4,5,6,7,8,9));
+
+// câu 3:
+function question3(text: string, letter: string): number{
+    let count: number = 0;
+    for(let i: number = 0; i < text.length; i++){
+        if(text[i] == letter){
+            count++;
+        }
+    }
+
+    return count;
+}
 
 
+// console.log(question3('xin chao cac ban','n'));
 
+// Câu 4:
+
+function question4(num: number): boolean{
+    if(num <= 0)
+        return false
+    if(num <= 2)
+        return true
+    for(let i: number =2; i <= Math.sqrt(num);i++){
+        if(num % i == 0){
+            return false
+        }
+    }
+
+    return true;
+}
+
+// console.log(question4(9));
 
