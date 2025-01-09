@@ -59,3 +59,57 @@ let myArray5: (string|number)[] = [1,"a",2, "b"];
 function test(variable: string|number|boolean): string|void{}
 
 
+// enum
+
+enum Sts {
+    Success = 'SUCCESS',
+    Warning = 'WARNING',
+    Error = 'ERROR'
+}
+
+// console.log(Sts.Success);
+// console.log(Sts.Warning);
+// console.log(Sts.Error);
+
+// Generic
+
+function getData1(array: string[]):string{
+    return array[0]
+}
+
+// console.log(getData1(["a","b","c"]));
+
+function getData2(array: number[]): number{
+    return array[0]
+}
+
+function getData<T>(array: T[]): T{
+    return array[0]
+}
+
+getData<string>(["a","b","c"]);
+getData<number>([1,2,3,4,5]);
+
+type Status<Data> ={
+    data: Data,
+    status: boolean
+}
+
+let userSts: Status<{name: string, age: number}> = {
+    data: {
+        name: "chinhpd5",
+        age: 20
+    },
+    status: true
+}
+
+let postSts: Status<{title: string, prices: number, sale?: boolean}> = {
+    data: {
+        title: "post 1",
+        prices: 20000
+    },
+    status: false
+}
+
+
+

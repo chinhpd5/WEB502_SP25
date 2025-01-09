@@ -32,3 +32,40 @@ let myArray4 = [1, 2, 3, 4];
 myArray4 = ["a", "b", "c"];
 let myArray5 = [1, "a", 2, "b"];
 function test(variable) { }
+// enum
+var Sts;
+(function (Sts) {
+    Sts["Success"] = "SUCCESS";
+    Sts["Warning"] = "WARNING";
+    Sts["Error"] = "ERROR";
+})(Sts || (Sts = {}));
+// console.log(Sts.Success);
+// console.log(Sts.Warning);
+// console.log(Sts.Error);
+// Generic
+function getData1(array) {
+    return array[0];
+}
+// console.log(getData1(["a","b","c"]));
+function getData2(array) {
+    return array[0];
+}
+function getData(array) {
+    return array[0];
+}
+getData(["a", "b", "c"]);
+getData([1, 2, 3, 4, 5]);
+let userSts = {
+    data: {
+        name: "chinhpd5",
+        age: 20
+    },
+    status: true
+};
+let postSts = {
+    data: {
+        title: "post 1",
+        prices: 20000
+    },
+    status: false
+};
