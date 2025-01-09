@@ -27,3 +27,24 @@ let myInfo: Info = {
     age: 20,
     gender: false
 }
+
+// Tuple
+let myTuple: [number, string, boolean] = [30, "chinhpd5", true];
+
+function hcn(a: number, b: number): [number, number]{
+    return [
+        (a+b)*2,
+        a*b
+    ]
+}
+
+let result = hcn(5,6);
+// console.log(result[0]);
+// console.log(result[1]);
+
+type RGB = [number,number,number];
+
+let black: RGB = [0,0,0]
+let white: RGB = [255,255,255]
+
+

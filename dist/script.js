@@ -14,3 +14,14 @@ let myInfo = {
     age: 20,
     gender: false
 };
+// Tuple
+let myTuple = [30, "chinhpd5", true];
+function hcn(a, b) {
+    return [
+        (a + b) * 2,
+        a * b
+    ];
+}
+let result = hcn(5, 6);
+let black = [0, 0, 0];
+let white = [255, 255, 255];
