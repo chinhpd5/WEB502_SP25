@@ -28,10 +28,10 @@ let chinhPerson: IPerson = {
     },
 }
 
-console.log(chinhPerson.id);// có thể đọc
+// console.log(chinhPerson.id);// có thể đọc
 // chinhPerson.id = 2; // Không thể gán
 chinhPerson.name = "chinhpd5 new"
-console.log(chinhPerson.name);
+// console.log(chinhPerson.name);
 
 
 let chinhUser: IUser = {
