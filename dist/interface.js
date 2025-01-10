@@ -11,7 +11,6 @@ let chinhUser = {
 };
 // chinhUser.id = 3;
 chinhUser.email = 'chinhpd6@fe.edu.vn';
-console.log(chinhUser);
 let namAdmin = {
     id: 2,
     email: "admin@fe.edu.vn",

@@ -25,7 +25,7 @@ let chinhUser: IUser = {
 
 chinhUser.email = 'chinhpd6@fe.edu.vn'
 
-console.log(chinhUser);
+// console.log(chinhUser);
 
 
 
