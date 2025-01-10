@@ -125,9 +125,9 @@ enum Sts {
     Error = 'ERROR'
 }
 
-console.log(Sts.Success);
-console.log(Sts.Warning);
-console.log(Sts.Error);
+// console.log(Sts.Success);
+// console.log(Sts.Warning);
+// console.log(Sts.Error);
 
 
 /**
