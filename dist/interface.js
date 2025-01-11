@@ -1,4 +1,10 @@
 "use strict";
+// type Person = {
+//   id: number
+//   name: string
+//   age: number
+//   gender: boolean
+// }
 let chinhPerson = {
     id: 1,
     name: "chinhpd5",
@@ -8,7 +14,7 @@ let chinhPerson = {
 // chinhPerson.id = 3
 // console.log(chinhPerson.id);
 chinhPerson.name = "chinhpd5 new";
-console.log(chinhPerson);
+// console.log(chinhPerson);
 let chinhUser = {
     id: 2,
     name: "chinhpd5",

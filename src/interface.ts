@@ -10,12 +10,12 @@ interface IUser extends IPerson {
   password: string
 }
 
-type Person = {
-  id: number
-  name: string
-  age: number
-  gender: boolean
-}
+// type Person = {
+//   id: number
+//   name: string
+//   age: number
+//   gender: boolean
+// }
 
 
 let chinhPerson: IPerson = {
@@ -28,7 +28,7 @@ let chinhPerson: IPerson = {
 // chinhPerson.id = 3
 // console.log(chinhPerson.id);
 chinhPerson.name = "chinhpd5 new"
-console.log(chinhPerson);
+// console.log(chinhPerson);
 
 
 
