@@ -1,22 +1,26 @@
 // import './App.css'
-import MyComponent from './components/MyComponent'
+import MyComponent from "./components/MyComponent";
 
 function App() {
-    // const myName:string = "chinhpd5";
+  const myName: any = "chinhpd5";
 
-    // console.log(123);
+  console.log(myName);
+  // console.log(123);
 
-    function test(a:number, b:number):void{
-        // debugger;
-        console.log(a+b);
-    }
-    test(1,2);
+  function test(a: number, b: number): void {
+    // debugger;
+    console.log(a + b);
+  }
+
+  test(1, 2);
+
+  test(3, 4);
 
   return (
     <>
-      <MyComponent/>
+      <MyComponent />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
