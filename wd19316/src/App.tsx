@@ -1,23 +1,23 @@
-import MyComponent from "./components/MyComponent"
+import MyComponent from "./components/MyComponent";
 
 function App() {
-  const myName: string = "chinhpd5"
+  const myName: any = `chinhpd5`;
 
   console.log(myName);
 
-  function sum(a:number, b:number):void{
+  function sum(a: number, b: number): void {
     // debugger;
-    console.log(a+b);
+    console.log(a + b);
   }
+  sum(2, 3);
 
-  sum(2,3);
-  
+  //logic 2
 
   return (
     <>
-      <MyComponent/>
+      <MyComponent />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
