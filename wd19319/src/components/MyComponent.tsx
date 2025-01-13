@@ -1,10 +1,17 @@
+type ProductType = {
+  title: string,
+  imageUrl: string,
+  price: number
+}
 
-function ProductItem(){
+function ProductItem(props: ProductType){ // react compnent
+  console.log(props);
+
   return(
     <>
-      <h1>Sản phẩm 1</h1>
-      <img style={{height: '100px'}} src="https://studiovietnam.com/wp-content/uploads/2022/08/background-chup-anh-san-pham-02.jpg" alt="" />
-      <h3>1000 vnđ</h3>
+      <h1>{props.title}</h1>
+      <img id="image" className="" style={{height: '100px'}} src={props.imageUrl} alt="" />
+      <h3>{props.price} vnđ</h3>
       <button>Mua ngay</button>
     </>
   )
@@ -13,9 +20,13 @@ function ProductItem(){
 function MyComponent(){
   return (
     <>
+      <ProductItem
+        title="Sản phẩm 1"
+        imageUrl="https://studiovietnam.com/wp-content/uploads/2022/08/background-chup-anh-san-pham-02.jpg"
+        price={1000}
+      /> {/* react component */}
       <ProductItem/>
-      <ProductItem/>
-      <ProductItem/>
+      {/*<ProductItem/> */}
     </>
   )
 }
