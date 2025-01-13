@@ -1,10 +1,19 @@
+type ProductType = {
+  title: string,
+  urlImage: string,
+  price: number
+}
 
-function ProductItem(){
+//Props
+
+function ProductItem(props: ProductType){
+  console.log(props);
+
   return (
     <>
-      <h1>Sản phẩm 1</h1>
-      <img style={{height: '200px'}} src="https://studiovietnam.com/wp-content/uploads/2022/08/background-chup-anh-san-pham-02.jpg" alt="" />
-      <h3>1000 vnđ</h3>
+      <h1 id="title">{props.title}</h1>
+      <img className="" style={{height: '200px'}} src={props.urlImage} alt="" />
+      <h3>{props.price} vnđ</h3>
       <button>Mua ngay</button>
     </>
   )
@@ -13,9 +22,19 @@ function ProductItem(){
 function MyComponent(){
   return (
     <>
-      <ProductItem/>
-      <ProductItem/>
-      <ProductItem/>
+      <ProductItem
+        title="Sản phẩm 1"
+        urlImage="https://studiovietnam.com/wp-content/uploads/2022/08/background-chup-anh-san-pham-02.jpg"
+        price={1000}
+      />
+
+      <ProductItem
+        title="Sản phẩm 2"
+        urlImage="https://studiovietnam.com/wp-content/uploads/2022/08/background-chup-anh-san-pham-02.jpg"
+        price={2000}
+      />
+      {/* <ProductItem/>
+      <ProductItem/> */}
     </>
   )
 
