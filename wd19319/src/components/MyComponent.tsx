@@ -18,15 +18,43 @@ function ProductItem(props: ProductType){ // react compnent
 }
 
 function MyComponent(){
+  const litsProduct: ProductType[] = [
+    {
+      title:"Sản phẩm 1",
+      imageUrl: "https://studiovietnam.com/wp-content/uploads/2022/08/background-chup-anh-san-pham-02.jpg",
+      price: 1000
+    },
+    {
+      title:"Sản phẩm 2",
+      imageUrl: "https://studiovietnam.com/wp-content/uploads/2022/08/background-chup-anh-san-pham-02.jpg",
+      price: 2000
+    },
+    {
+      title:"Sản phẩm 3",
+      imageUrl: "https://studiovietnam.com/wp-content/uploads/2022/08/background-chup-anh-san-pham-02.jpg",
+      price: 3000
+    }
+  ]
+
   return (
     <>
-      <ProductItem
+      {
+        litsProduct.map((item: ProductType,index:number)=>{
+          return (
+            <ProductItem
+              key={index}
+              title= {item.title}
+              imageUrl= {item.imageUrl}
+              price={item.price}
+            />
+          )
+        })
+      }
+      {/* <ProductItem
         title="Sản phẩm 1"
         imageUrl="https://studiovietnam.com/wp-content/uploads/2022/08/background-chup-anh-san-pham-02.jpg"
         price={1000}
-      /> {/* react component */}
-      <ProductItem/>
-      {/*<ProductItem/> */}
+      /> */}
     </>
   )
 }
