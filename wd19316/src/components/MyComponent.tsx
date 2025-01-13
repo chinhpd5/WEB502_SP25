@@ -1,9 +1,22 @@
 
-function MyComponent(){
-  // code Js, TS
+function ProductItem(){
   return (
-    // Html
-    <h1>Xin chào các bạn</h1>
+    <>
+      <h1>Sản phẩm 1</h1>
+      <img style={{height: '200px'}} src="https://studiovietnam.com/wp-content/uploads/2022/08/background-chup-anh-san-pham-02.jpg" alt="" />
+      <h3>1000 vnđ</h3>
+      <button>Mua ngay</button>
+    </>
+  )
+}
+
+function MyComponent(){
+  return (
+    <>
+      <ProductItem/>
+      <ProductItem/>
+      <ProductItem/>
+    </>
   )
 
 }
