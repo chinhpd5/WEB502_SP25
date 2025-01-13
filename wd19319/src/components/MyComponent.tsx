@@ -5,14 +5,16 @@ type ProductType = {
 }
 
 function ProductItem(props: ProductType){ // react compnent
-  console.log(props);
+  // console.log(props);
 
   return(
     <>
       <h1>{props.title}</h1>
       <img id="image" className="" style={{height: '100px'}} src={props.imageUrl} alt="" />
       <h3>{props.price} vnđ</h3>
-      <button>Mua ngay</button>
+      <button onDoubleClick={()=>{
+        console.log(props.title)
+      }}>Mua ngay</button>
     </>
   )
 }

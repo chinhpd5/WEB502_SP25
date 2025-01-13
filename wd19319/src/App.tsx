@@ -1,11 +1,13 @@
 // import './App.css'
-import MyComponent from "./components/MyComponent";
+import DoUseState from "./components/DoUseState";
+// import MyComponent from "./components/MyComponent";
 
 function App() {
 
   return (
     <>
-      <MyComponent />
+      {/* <MyComponent /> */}
+      <DoUseState/>
     </>
   );
 }
