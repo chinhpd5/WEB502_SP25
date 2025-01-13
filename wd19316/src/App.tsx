@@ -1,10 +1,11 @@
-import MyComponent from "./components/MyComponent";
+// import MyComponent from "./components/MyComponent";
+import MyUseState from "./components/MyUseState";
 
 function App() {
 
   return (
     <>
-      <MyComponent />
+      <MyUseState/>
     </>
   );
 }
