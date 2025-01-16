@@ -27,6 +27,13 @@ export default tseslint.config(
       "no-unused-vars": ["error"], /* Khai báo biến nhưng không dùng */
       "no-console": ["warn"], /* Không sử dụng console */
       "no-debugger": ["error"], /* Không sử dụng debugger */
+      "no-multiple-empty-lines": ["error", { "max": 1 }], /** Không được xuống dòng 2 lần */
+      "no-trailing-spaces": ["error"], /* Xóa các khoảng trắng không cần thiết ở cuối mỗi dòng */
+      "semi": ["off", "always"], /* Không bắt buộc đấu chấm phẩy: never always */
+      "eol-last": ["error", "always"], /* Bắt buộc phải có 1 dòng cuối file */
+      // "quotes": ["error", "single"], /* Cho phép sử dụng dấu nháy đơn hay nháy kép hay `` */
+      "indent": ["error", 2], /* Quy định về thụt lề */
+      "brace-style": ["error", "1tbs"], /* Sử dụng dấu ngoặc trên cùng 1 dòng; stroustrup: sử dụng dấu ngoặc ở dòng mới */
     },
   },
 )
