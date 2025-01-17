@@ -18,6 +18,25 @@ function ToDoList(){
     setText("")
   }
 
+  const handleDelete = (indexDelete: number)=>{
+    // console.log(indexDelete);
+
+    setJobs((prev: string[])=>{
+      const newJobs = prev.filter((item:string,index:number)=>{
+        return index != indexDelete
+      })
+
+      return newJobs
+    })
+
+    setJobs(
+      (prev:string[]) => 
+        prev.filter(
+          (item: string,index:number) => index != indexDelete 
+        )
+      )
+  }
+
   return (
     <>
       <h1>Todo list</h1>
@@ -35,7 +54,10 @@ function ToDoList(){
         {
           jobs.map((item: string,index: number)=>{
             return (
-              <li key={index}>{index+1}. {item} <button>Xóa</button></li> 
+              <li key={index}>
+                {index+1}. {item} 
+                <button onClick={()=>{handleDelete(index)}}>Xóa</button>
+              </li> 
             )
           })
         }
