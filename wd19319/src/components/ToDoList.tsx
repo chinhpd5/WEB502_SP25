@@ -21,6 +21,7 @@ function ToDoList(){
   const handleDelete = (indexDelete: number)=>{
     // console.log(indexDelete);
 
+    // cú pháp 1
     setJobs((prev: string[])=>{
       const newJobs = prev.filter((item:string,index:number)=>{
         return index != indexDelete
@@ -29,6 +30,7 @@ function ToDoList(){
       return newJobs
     })
 
+    // cú pháp 2
     setJobs(
       (prev:string[]) => 
         prev.filter(
