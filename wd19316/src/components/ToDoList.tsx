@@ -56,7 +56,9 @@ function ToDoList(){
           return (
             <li key={index}>
               {index+1}. {item} 
-              <button onClick={()=>{handleDelete(index)}}>Xóa</button>
+              <button onClick={
+                ()=>{handleDelete(index)}
+              }>Xóa</button>
             </li>
           )
         })}
