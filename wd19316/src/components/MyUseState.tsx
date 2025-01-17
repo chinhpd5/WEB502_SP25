@@ -8,8 +8,8 @@ function MyUseState(){
     setCounter((prev) => { // prev giá trị cũ của counter
       return prev+1
     })
-    setCounter((prev) => prev+1)
-    setCounter((prev) => prev+1)
+    // setCounter((prev) => prev+1)
+    // setCounter((prev) => prev+1)
   }
 
   return (
