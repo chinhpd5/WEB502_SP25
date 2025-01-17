@@ -18,6 +18,24 @@ function ToDoList(){
       setText('')
     }    
   }
+  
+  const handleDelete = (indexDelete: number) =>{
+    // console.log(indexDelete);
+
+    // setJobs((prev: string[])=>{
+    //   const newJobs = prev.filter((item:string,index: number)=>{
+    //     return index != indexDelete
+    //   })
+
+    //   return newJobs;
+    // })
+
+    setJobs((prev:string[]) => 
+      prev.filter(
+        (item: string,index:number) => index != indexDelete)
+      )
+    
+  }
 
   return (
     <>
@@ -38,7 +56,7 @@ function ToDoList(){
           return (
             <li key={index}>
               {index+1}. {item} 
-              <button>Xóa</button>
+              <button onClick={()=>{handleDelete(index)}}>Xóa</button>
             </li>
           )
         })}
