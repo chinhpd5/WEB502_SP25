@@ -8,8 +8,8 @@ function DoUseState(){
     setCounter((prev: number)=>{
       return prev+1
     })
-    setCounter((prev: number)=> prev +1)
-    setCounter((prev: number)=> prev +1)
+    // setCounter((prev: number)=> prev +1)
+    // setCounter((prev: number)=> prev +1)
   }
 
   return (
