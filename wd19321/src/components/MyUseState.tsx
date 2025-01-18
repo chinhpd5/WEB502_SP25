@@ -5,7 +5,16 @@ function MyUseState(){
   const [counter,setCounter] = useState<number>(10)
 
   const handleIncrease = () =>{
-    setCounter(counter+1)
+    setCounter((prev: number)=>{
+      return prev+1
+    })
+    setCounter((prev: number)=>{
+      return prev+1
+    })
+    setCounter((prev: number)=>{
+      return prev+1
+    })
+    
   }
 
   return (
@@ -13,8 +22,12 @@ function MyUseState(){
       <h1>UseState</h1>
       <h1>{counter}</h1>
       <button onClick={handleIncrease}>Tăng</button>
-      <button>Giảm</button>
-      <button>Reset</button>
+      <button onClick={()=>{
+        setCounter(counter-1)
+      }}>Giảm</button>
+      <button onClick={()=>{
+        setCounter(0)
+      }}>Reset</button>
     </>
   )
 }
