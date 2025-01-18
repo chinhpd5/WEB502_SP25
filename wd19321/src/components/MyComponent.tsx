@@ -47,19 +47,17 @@ function MyComponent() {
       <h1>Element</h1>
 
       {
-        
+        productList.map((item: ProductType,index: number)=>{
+          return (
+            <ProductItem
+              key={index}
+              title={item.title}
+              urlImage={item.urlImage}
+              price={item.price}
+            />
+          )
+        })
       }
-      <ProductItem
-        title="Sản phẩm 1"
-        urlImage="https://atinproduction.com/wp-content/uploads/2021/07/AWP01220-scaled-1280x1920.jpg"
-        price={1000}
-      />
-
-      <ProductItem
-        title="Sản phẩm 2"
-        urlImage="https://studiovietnam.com/wp-content/uploads/2022/08/background-chup-anh-san-pham-02.jpg"
-        price={2000}
-      />
     </>
   );
 }
