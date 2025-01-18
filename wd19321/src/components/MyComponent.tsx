@@ -22,9 +22,33 @@ function ProductItem(props: ProductType) {
 }
 
 function MyComponent() {
+
+  const productList: ProductType[] = [
+    {
+      title: "Sản phẩm 1",
+      urlImage: "https://atinproduction.com/wp-content/uploads/2021/07/AWP01220-scaled-1280x1920.jpg",
+      price: 1000
+    },
+    {
+      title: "Sản phẩm 2",
+      urlImage: "https://studiovietnam.com/wp-content/uploads/2022/08/background-chup-anh-san-pham-02.jpg",
+      price: 2000
+    },
+    {
+      title: "Sản phẩm 3",
+      urlImage: "https://lavenderstudio.com.vn/wp-content/uploads/2019/09/chup-hinh-san-pham-my-pham-spa-15-839x1024.jpg",
+      price: 3000
+    }
+
+  ]
+
   return (
     <>
       <h1>Element</h1>
+
+      {
+        
+      }
       <ProductItem
         title="Sản phẩm 1"
         urlImage="https://atinproduction.com/wp-content/uploads/2021/07/AWP01220-scaled-1280x1920.jpg"
