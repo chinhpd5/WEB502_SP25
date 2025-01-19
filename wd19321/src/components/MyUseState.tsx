@@ -8,12 +8,12 @@ function MyUseState(){
     setCounter((prev: number)=>{
       return prev+1
     })
-    setCounter((prev: number)=>{
-      return prev+1
-    })
-    setCounter((prev: number)=>{
-      return prev+1
-    })
+    // setCounter((prev: number)=>{
+    //   return prev+1
+    // })
+    // setCounter((prev: number)=>{
+    //   return prev+1
+    // })
     
   }
 
