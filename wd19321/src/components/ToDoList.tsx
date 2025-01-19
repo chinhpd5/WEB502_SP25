@@ -4,7 +4,18 @@ function ToDoList(){
   const [text,setText] = useState<string>('');
   const [jobs,setJobs] = useState<string[]>(['Ăn','Ngủ','Code'])
 
-  console.log(text);
+  // console.log(text);
+
+  const handleAdd = ()=>{
+    console.log(123);
+    setJobs((prevJobs: string[])=>{
+      return [
+        ...prevJobs,// spread
+        text
+      ]
+    })
+    setText('')
+  }
   
   return (
     <>
@@ -20,7 +31,7 @@ function ToDoList(){
         }
         value={text}        
       />
-      <button>Add</button>
+      <button onClick={handleAdd}>Add</button>
       <ul>
         {
           jobs.map((item:string,index:number)=>{
