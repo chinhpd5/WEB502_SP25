@@ -6,7 +6,8 @@ import LayoutClient from "./pages/layouts/LayoutClient";
 function App() {
 
   return (
-    <> 
+    <>
+      <h1 className="text-center text-danger">chinhpd5</h1>
       <Routes>
         
         <Route path="/" element={<LayoutClient/>}>
