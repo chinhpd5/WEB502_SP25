@@ -1,17 +1,20 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import MyUseEffect from "./components/MyUseEffect";
-// import MyComponent from "./components/MyComponent";
-// import MyUseState from "./components/MyUseState";
-// import ToDoList from "./components/ToDoList";
+import Home from "./pages/Home";
+import Products from "./pages/Products";
 
 function App() {
 
   return (
     <>
-      {/* <MyComponent/> */}
-      {/* <MyUseState/> */}
-      {/* <ToDoList/> */}
-      <MyUseEffect/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/product' element={<Products/>}/>
+        <Route path='/news' element={<h1>Tin tức</h1>}/>
+        <Route path='/contact' element={<h1>Liên hệ</h1>}/>
+
+        <Route path="*" element={<h1>Not found</h1>}/>
+      </Routes>
     </>
   );
 }
