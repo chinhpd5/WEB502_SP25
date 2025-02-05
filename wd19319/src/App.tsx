@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <h1 className="text-center text-danger">chinhpd5</h1>
+      {/* <h1 className="text-center text-danger">chinhpd5</h1> */}
       <Routes>
         
         <Route path="/" element={<LayoutClient/>}>
