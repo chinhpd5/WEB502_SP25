@@ -7,7 +7,7 @@ function ProductItem(props: IProduct) {
   return (
     <Link to={`/product/${props.id}`} className="mb-3">
       <div className="card" style={{ width: "300px" }}>
-        <img style={{width: '90%', height:'400px', objectFit:'cover'}} src={props.thumbnail} className="card-img-top" alt="..." />
+        <img style={{ height:'300px'}} src={props.thumbnail} className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title text-truncate">{props.title}</h5>
           <p className="card-text text-truncate">
