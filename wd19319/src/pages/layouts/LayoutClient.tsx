@@ -52,7 +52,9 @@ function LayoutClient() {
         </div>
       </nav>
 
-      <Outlet />
+      <div className="container">
+        <Outlet />
+      </div>
 
       <h1>Footer</h1>
     </>
