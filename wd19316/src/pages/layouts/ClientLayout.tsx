@@ -88,7 +88,9 @@ function ClientLayout() {
         </div>
       </nav>
 
-      <Outlet />
+      <div className="container">
+        <Outlet />
+      </div>
 
       {/* <h1>Footer layout</h1> */}
     </>
