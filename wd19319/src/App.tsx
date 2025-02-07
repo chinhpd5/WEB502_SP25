@@ -3,9 +3,9 @@ import Home from "./pages/Home";
 import Products from "./pages/Products";
 import LayoutClient from "./pages/layouts/LayoutClient";
 import ProductDetail from "./pages/ProductDetail";
-import LayoutAmin from "./pages/layouts/LayoutAmin";
 import List from "./pages/product/List";
 import Add from "./pages/product/Add";
+import LayoutAdmin from "./pages/layouts/LayoutAdmin";
 
 function App() {
 
@@ -22,7 +22,7 @@ function App() {
           <Route path="about" element={<h1>About</h1>}/>
         </Route>
 
-        <Route path="/admin" element={<LayoutAmin/>}>
+        <Route path="/admin" element={<LayoutAdmin/>}>
           <Route path="product" element={<List/>}/>
           <Route path="product/add" element={<Add/>}/>
         </Route>

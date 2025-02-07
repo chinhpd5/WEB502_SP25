@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 
-function LayoutAmin() {
+function LayoutAdmin() {
   return (
     <div className='container'>
       <Outlet/>
@@ -9,4 +9,4 @@ function LayoutAmin() {
   )
 }
 
-export default LayoutAmin
+export default LayoutAdmin
