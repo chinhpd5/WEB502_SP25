@@ -9,3 +9,5 @@ interface IProduct {
 } 
 
 export default IProduct;
+
+export type ProductInput = Omit<IProduct,'id' | 'stock'>
