@@ -6,6 +6,7 @@ import ProductDetail from "./pages/ProductDetail";
 import List from "./pages/product/List";
 import Add from "./pages/product/Add";
 import LayoutAdmin from "./pages/layouts/LayoutAdmin";
+import { Toaster } from "react-hot-toast";
 
 function App() {
 
@@ -28,8 +29,8 @@ function App() {
         </Route>
 
         <Route path="*" element={<h1>Not found</h1>}/>
-        
       </Routes>
+      <Toaster />
     </>
   );
 }

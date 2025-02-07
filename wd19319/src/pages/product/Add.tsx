@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { ProductInput } from "../../interfaces/product";
+import axios, { AxiosError } from "axios";
+import toast from "react-hot-toast";
 
 const productInit: ProductInput = {
   title:'',
@@ -23,9 +25,16 @@ function Add() {
     })
   }
 
-  const handleSubmit =(e: React.FormEvent<HTMLFormElement>)=>{
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault();
-    console.log(product);
+    // console.log(product);
+
+    try {
+      await axios.post(`http://localhost:3000/products`,product)
+      toast.success("Thêm thành công")
+    } catch (error) {
+      toast.error((error as AxiosError).message)
+    }
     
   }
   

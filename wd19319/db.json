@@ -6,7 +6,7 @@
       "description": "Iphone16 is officially announced on April 2024.",
       "price": 480,
       "discountPercentage": 20.91,
-      "rating": 5.0,
+      "rating": 5,
       "stock": 300,
       "brand": "Apple",
       "category": "smartphones",
@@ -335,6 +335,14 @@
       "brand": "Golden",
       "category": "home-decoration",
       "thumbnail": "https://cdn.hoanghamobile.com/Uploads/2024/08/14/bluetooth-sounarc-p2.png;trim.threshold=80;trim.percentpadding=0.5;width=240;height=240;mode=pad;paddingWidth=5;"
+    },
+    {
+      "id": "5e92",
+      "title": "a",
+      "price": "1",
+      "description": "mô tả",
+      "thumbnail": "https://picsum.photos/200/200",
+      "category": "laptops"
     }
   ]
 }
