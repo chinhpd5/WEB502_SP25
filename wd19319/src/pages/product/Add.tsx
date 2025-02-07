@@ -2,54 +2,71 @@ import React, { useState } from "react";
 import { ProductInput } from "../../interfaces/product";
 import axios, { AxiosError } from "axios";
 import toast from "react-hot-toast";
+import { useForm } from "react-hook-form";
 
-const productInit: ProductInput = {
-  title:'',
-  price: 0,
-  description:'',
-  thumbnail:'',
-  category:'smartphones'
-}
+// const productInit: ProductInput = {
+//   title:'',
+//   price: 0,
+//   description:'',
+//   thumbnail:'',
+//   category:'smartphones'
+// }
 
 function Add() {
 
-  const [product,setProduct] = useState<ProductInput>(productInit)
+  // const [product,setProduct] = useState<ProductInput>(productInit)
 
-  // console.log(product);
-  const handleChangeInput = (e:React.ChangeEvent<HTMLInputElement|HTMLSelectElement>,key: string)=>{
-    setProduct((prev:ProductInput)=>{
-      return {
-        ...prev, //spread
-        [key]: e.target.value
-      }
-    })
-  }
+  // // console.log(product);
+  // const handleChangeInput = (e:React.ChangeEvent<HTMLInputElement|HTMLSelectElement>,key: string)=>{
+  //   setProduct((prev:ProductInput)=>{
+  //     return {
+  //       ...prev, //spread
+  //       [key]: e.target.value
+  //     }
+  //   })
+  // }
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>)=>{
-    e.preventDefault();
-    // console.log(product);
+  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>)=>{
+  //   e.preventDefault();
+  //   // console.log(product);
 
+  //   try {
+  //     await axios.post(`http://localhost:3000/products`,product)
+  //     toast.success("Thêm thành công")
+  //   } catch (error) {
+  //     toast.error((error as AxiosError).message)
+  //   }
+    
+  // }
+
+  const {
+    register,
+    handleSubmit
+  } = useForm<ProductInput>()
+
+  const onSubmit =async (data: ProductInput)=>{
+    console.log(data);
     try {
-      await axios.post(`http://localhost:3000/products`,product)
+      await axios.post(`http://localhost:3000/products`,data)
       toast.success("Thêm thành công")
     } catch (error) {
       toast.error((error as AxiosError).message)
     }
-    
   }
   
   return (
     <div>
       <h1>Thêm mới sản phẩm</h1>
 
-      <form onSubmit={(e)=>{handleSubmit(e)}}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-3">
           <label htmlFor="title" className="form-label">
             Tên sản phẩm
           </label>
           <input type="text" className="form-control" id="title"
-            value={product.title}
-            onChange={(e)=>{handleChangeInput(e,'title')}}
+            // value={product.title}
+            // onChange={(e)=>{handleChangeInput(e,'title')}}
+            {...register("title")}
           />
         </div>
 
@@ -58,8 +75,9 @@ function Add() {
             Giá bán
           </label>
           <input type="number" className="form-control" id="price" 
-             value={product.price}
-             onChange={(e)=>{handleChangeInput(e,'price')}}
+            //  value={product.price}
+            //  onChange={(e)=>{handleChangeInput(e,'price')}}
+            {...register("price")}
           />
         </div>
 
@@ -68,8 +86,9 @@ function Add() {
             Hình ảnh
           </label>
           <input type="text" className="form-control" id="thumbnail"
-            value={product.thumbnail}
-            onChange={(e)=>{handleChangeInput(e,'thumbnail')}}
+            // value={product.thumbnail}
+            // onChange={(e)=>{handleChangeInput(e,'thumbnail')}}
+            {...register("thumbnail")}
           />
         </div>
 
@@ -78,8 +97,9 @@ function Add() {
             Mô tả
           </label>
           <input type="text" className="form-control" id="description" 
-            value={product.description}
-            onChange={(e)=>{handleChangeInput(e,'description')}}
+            // value={product.description}
+            // onChange={(e)=>{handleChangeInput(e,'description')}}
+            {...register("description")}
           />
         </div>
 
@@ -88,8 +108,9 @@ function Add() {
             Danh mục
           </label>
           <select className="form-select" 
-            value={product.category}
-            onChange={(e)=>{handleChangeInput(e,'category')}}
+            // value={product.category}
+            // onChange={(e)=>{handleChangeInput(e,'category')}}
+            {...register("category")}
           >
             <option value={'smartphones'}>smartphones</option>
             <option value={'laptops'}>laptops</option>
