@@ -45,7 +45,7 @@ function Add() {
   } = useForm<ProductInput>()
 
   const onSubmit =async (data: ProductInput)=>{
-    console.log(data);
+    // console.log(data);
     try {
       await axios.post(`http://localhost:3000/products`,data)
       toast.success("Thêm thành công")
