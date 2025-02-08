@@ -343,6 +343,14 @@
       "price": "1000",
       "category": "laptops",
       "description": "mô tả"
+    },
+    {
+      "id": "495b",
+      "title": "sản phẩm 2",
+      "price": "134556",
+      "thumbnail": "https://picsum.photos/200/200",
+      "description": "mô tả",
+      "category": "skincare"
     }
   ]
 }
