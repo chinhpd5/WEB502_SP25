@@ -8,4 +8,6 @@ interface IProduct {
   thumbnail: string
 }
 
-export default IProduct
+export default IProduct;
+
+export type ProductInput = Omit<IProduct,'id'|'stock'>
