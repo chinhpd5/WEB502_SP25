@@ -4,6 +4,9 @@ import Home from "./pages/Home";
 import Products from "./pages/Products";
 import ClientLayout from "./pages/layouts/ClientLayout";
 import ProductDetail from "./pages/ProductDetail";
+import AdminLayout from "./pages/layouts/AdminLayout";
+import List from "./pages/products/List";
+import Add from "./pages/products/Add";
 
 function App() {
 
@@ -17,6 +20,11 @@ function App() {
           <Route path='product/:id' element={<ProductDetail/>}/>
           <Route path='news' element={<h1>Tin tức</h1>}/>
           <Route path='contact' element={<h1>Liên hệ</h1>}/>
+        </Route>
+
+        <Route path="/admin" element={<AdminLayout/>}>
+          <Route path="product" element={<List/>}/>
+          <Route path="product/add" element={<Add/>}/>
         </Route>
 
         <Route path="*" element={<h1>Not found</h1>}/>
