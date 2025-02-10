@@ -2,6 +2,7 @@ import axios, { AxiosError } from "axios";
 import React, { useEffect, useState } from "react";
 import IProduct from "../../interfaces/product";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 function List() {
   const [products, setProducts] = useState<IProduct[]>([]);
@@ -20,11 +21,33 @@ function List() {
     getAllProducts();
   }, []);
 
-  console.log(products);
+  const handleDelete = async (id: string) =>{
+    // console.log(id);
+    if(window.confirm("Bạn có chắc chắn muốn xóa không ?")){
+      try {
+        await axios.delete(`http://localhost:3000/products/${id}`)
+        
+        toast.success("Xóa thành công");
+
+        setProducts((prev: IProduct[])=>{
+          return prev.filter((item:IProduct)=>{
+            return item.id != id
+          })
+        })
+      } catch (error) {
+        toast.error((error as AxiosError).message)
+      }
+    }
+    
+  }
+
+  // console.log(products);
 
   return (
     <div>
       <h1>Danh sách sản phẩm</h1>
+      <Link className="btn btn-primary" to={`/admin/product/add`}>Thêm mới</Link>
+      {/* <Link className="btn btn-warning" to={`add`}>Thêm mới</Link> */}
       <table className="table table-bordered table-striped table-hover">
         <thead>
           <tr>
@@ -45,6 +68,9 @@ function List() {
                 <td><img src={item.thumbnail} width={'80px'} alt="" /></td>
                 <td>{item.price}</td>
                 <td>{item.description}</td>
+                <td>
+                  <button onClick={()=>{handleDelete(item.id)}} className="btn btn-danger">Xóa</button>
+                </td>
               </tr>
             );
           })}

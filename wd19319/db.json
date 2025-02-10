@@ -351,14 +351,6 @@
       "thumbnail": "https://picsum.photos/200/200",
       "description": "mô tả",
       "category": "laptops"
-    },
-    {
-      "id": "74be",
-      "title": "sản phẩm 5",
-      "price": "10",
-      "thumbnail": "https://picsum.photos/200/200",
-      "description": "mô tả",
-      "category": "fragrances"
     }
   ]
 }

@@ -3,6 +3,7 @@ import { ProductInput } from "../../interfaces/product";
 import axios, { AxiosError } from "axios";
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 // const productInit: ProductInput = {
 //   title:'',
@@ -38,6 +39,7 @@ function Add() {
   //   }
     
   // }
+  const navigate = useNavigate();
 
   const {
     register,
@@ -49,7 +51,8 @@ function Add() {
     // console.log(data);
     try {
       await axios.post(`http://localhost:3000/products`,data)
-      toast.success("Thêm thành công")
+      toast.success("Thêm thành công");
+      navigate('/admin/product')
     } catch (error) {
       toast.error((error as AxiosError).message)
     }
