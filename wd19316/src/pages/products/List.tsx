@@ -1,6 +1,7 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import React, { useEffect, useState } from "react";
 import IProduct from "../../interfaces/product";
+import toast from "react-hot-toast";
 
 function List() {
   const [products, setProducts] = useState<IProduct[]>([]);
@@ -18,6 +19,25 @@ function List() {
   }, []);
 
   // console.log(products);
+
+  const handleDelete = async (id: string)=>{
+    // console.log(id);
+    if(window.confirm("Bạn có chắc chắn muốn xóa không?")){
+      try {
+        await axios.delete(`http://localhost:3000/products/${id}`);
+        toast.success("Xóa thành công")
+
+        setProducts((prev: IProduct[])=>{
+          return prev.filter((item:IProduct)=>{
+            return item.id != id
+          })
+        })
+      } catch (error) {
+        toast.error((error as AxiosError).message)
+      }
+    }
+    
+  }
 
   return (
     <div>
@@ -44,6 +64,9 @@ function List() {
                 <td>{item.price}</td>
                 <td>{item.description}</td>
                 <td>{item.category}</td>
+                <td>
+                  <button onClick={()=>{handleDelete(item.id)}} className="btn btn-danger">Xóa</button>                  
+                </td>
               </tr>
             );
           })}
