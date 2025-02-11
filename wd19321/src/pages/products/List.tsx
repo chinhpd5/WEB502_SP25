@@ -1,23 +1,46 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import React, { useEffect, useState } from "react";
 import IProduct from "../../interfaces/product";
+import toast from "react-hot-toast";
 
 function List() {
   const [products, setProducts] = useState<IProduct[]>([]);
 
   useEffect(() => {
     const getAllProducts = async () => {
-      const { data } = await axios.get(`http://localhost:3000/products`); // destructring
-      // console.log(data);
-      if (data) {
-        setProducts(data);
+      try {
+        const { data } = await axios.get(`http://localhost:3000/products`); // destructring
+        // console.log(data);
+        if (data) {
+          setProducts(data);
+        }
+      } catch (error) {
+        toast.error((error as AxiosError).message)
       }
     };
 
     getAllProducts();
   }, []);
 
-  console.log(products);
+  // console.log(products);
+
+  const handleDetele = async (id:string) =>{
+    // console.log(id);
+    if(window.confirm("Bạn có chắc chắn muốn xóa không ?")){
+      try {
+        await axios.delete(`http://localhost:3000/products/${id}`);
+        toast.success("Xóa thành công")
+  
+        setProducts((prev: IProduct[])=>{
+          return prev.filter((item:IProduct)=>{
+            return item.id != id
+          })
+        })
+      } catch (error) {
+        toast.error((error as AxiosError).message)
+      }
+    }
+  }
 
   return (
     <div>
@@ -45,7 +68,7 @@ function List() {
                 <td>{item.description}</td>
                 <td>{item.category}</td>
                 <td>
-                  
+                  <button onClick={()=>{handleDetele(item.id)}} className="btn btn-danger">Xóa</button>
                 </td>
               </tr>
             );

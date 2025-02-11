@@ -335,30 +335,6 @@
       "brand": "Golden",
       "category": "home-decoration",
       "thumbnail": "https://cdn.hoanghamobile.com/Uploads/2024/08/14/bluetooth-sounarc-p2.png;trim.threshold=80;trim.percentpadding=0.5;width=240;height=240;mode=pad;paddingWidth=5;"
-    },
-    {
-      "id": "0119",
-      "title": "sản phẩm 1",
-      "thumbnail": "https://picsum.photos/200/200",
-      "price": "1000",
-      "category": "laptops",
-      "description": "mô tả"
-    },
-    {
-      "id": "495b",
-      "title": "sản phẩm 2",
-      "price": "134556",
-      "thumbnail": "https://picsum.photos/200/200",
-      "description": "mô tả",
-      "category": "skincare"
-    },
-    {
-      "id": "2d4c",
-      "title": "sản phẩm 1",
-      "price": "1000",
-      "thumbnail": "https://picsum.photos/200/200",
-      "description": "mô tả",
-      "category": "laptops"
     }
   ]
 }
