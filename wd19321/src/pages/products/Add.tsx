@@ -38,7 +38,8 @@ function Add() {
 
   const { 
     register,
-    handleSubmit
+    handleSubmit,
+    formState: {errors}
   } = useForm<ProductInput>() 
   
   const onSubmit = async (data:ProductInput) =>{
@@ -75,21 +76,48 @@ function Add() {
             //   //   }
             //   // })
             // }}
-            {...register('title')}
+            {...register('title',{
+              required: "Không để trống tên sản phẩm",
+              minLength: {
+                value: 3,
+                message: "Cần tối thiểu 3 ký tự"
+              },
+              maxLength: {
+                value: 10,
+                message: "Cần tối đa 10 ký tự"
+              }
+            })}
           />
+          {errors?.title && <span className="text-danger">{errors?.title?.message}</span>}
         </div>
 
         <div className="mb-3">
           <label htmlFor="price" className="form-label">
             Giá bán
           </label>
-          <input type="number" className="form-control" id="price" 
+          <input type="text" className="form-control" id="price" 
           // value={product.price}
           // onChange={(e)=>{
           //   handleChangeInput(e,'price')
           // }}
-          {...register('price')}
+          {...register('price',{
+            required: "Không để trống giá bán",
+            min: {
+              value: 0,
+              message: "Giá bán lớn hơn hoặc bằng 0"
+            },
+            max: {
+              value: 1000,
+              message: "Giá bán nhỏ hơn hoặc bằng 1000"
+            },
+            pattern: {
+              value: /^\d+$/,
+              message: "Sai định dạng number"
+            }
+          })}
           />
+          {errors?.price && <span className="text-danger">{errors?.price?.message}</span>}
+
         </div>
 
         <div className="mb-3">
@@ -103,6 +131,7 @@ function Add() {
           // }}
           {...register('thumbnail')}
           />
+          {/* Không để trống hình ảnh, tối đa 255 ký tự */}
         </div>
 
         <div className="mb-3">
@@ -116,6 +145,7 @@ function Add() {
           // }}
           {...register("description")}
           />
+          {/* Không để trống mô tả */}
         </div>
 
         <div className="mb-3">
