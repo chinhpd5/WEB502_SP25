@@ -351,6 +351,14 @@
       "thumbnail": "https://picsum.photos/200/200",
       "description": "mô tả",
       "category": "skincare"
+    },
+    {
+      "id": "2d4c",
+      "title": "sản phẩm 1",
+      "price": "1000",
+      "thumbnail": "https://picsum.photos/200/200",
+      "description": "mô tả",
+      "category": "laptops"
     }
   ]
 }
