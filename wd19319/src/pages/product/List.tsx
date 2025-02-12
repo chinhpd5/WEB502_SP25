@@ -55,6 +55,7 @@ function List() {
             <th scope="col">Tên sản phẩm</th>
             <th scope="col">Hình ảnh</th>
             <th scope="col">Giá bán</th>
+            <th scope="col">Danh mục</th>
             <th scope="col">Mô tả</th>
             <th scope="col"></th>
           </tr>
@@ -67,9 +68,12 @@ function List() {
                 <td>{item.title}</td>
                 <td><img src={item.thumbnail} width={'80px'} alt="" /></td>
                 <td>{item.price}</td>
+                <td>{item.category}</td>
                 <td>{item.description}</td>
                 <td>
                   <button onClick={()=>{handleDelete(item.id)}} className="btn btn-danger">Xóa</button>
+                  <Link className="btn btn-warning" to={`edit/${item.id}`}>Sửa</Link>
+                  {/* <Link className="btn btn-warning" to={`/admin/product/edit/${item.id}`}>Sửa</Link> */}
                 </td>
               </tr>
             );
