@@ -14,14 +14,14 @@
     },
     {
       "id": "4",
-      "title": "OPPOF19",
+      "title": "OPPOF19 update",
       "description": "OPPO F19 is officially announced on April 2021.",
-      "price": 280,
+      "price": "300",
       "discountPercentage": 17.91,
       "rating": 4.3,
       "stock": 123,
       "brand": "OPPO",
-      "category": "smartphones",
+      "category": "laptops",
       "thumbnail": "https://cdn.hoanghamobile.com/i/productlist/ts/Uploads/2023/08/24/a58-5.png"
     },
     {
@@ -351,6 +351,24 @@
       "thumbnail": "https://picsum.photos/200/200",
       "description": "mô tả",
       "category": "laptops"
+    }
+  ],
+  "courses":[
+    {
+      "id":"1",
+      "courseName": "JS Cơ bản",
+      "views":20,
+      "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/8/8a/Javascript.jpg",
+      "note": "none",
+      "category":"Javascript"
+    },
+    {
+      "id":"2",
+      "courseName": "PHP Cơ bản",
+      "views":29,
+      "thumbnail":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTef5lOqn3-0aRjvM19iJy-lAknXy3vSH1OfA&s",
+      "note":"none",
+      "category":"PHP"
     }
   ]
 }

@@ -7,6 +7,8 @@ import AdminLayout from "./pages/layouts/AdminLayout";
 import List from "./pages/products/List";
 import Add from "./pages/products/Add";
 import { Toaster } from "react-hot-toast";
+import Edit from "./pages/products/Edit";
+import ListCourse from "./pages/course/ListCourse";
 
 function App() {
 
@@ -26,6 +28,9 @@ function App() {
         <Route path="/admin" element={<AdminLayout/>}>
           <Route path="product" element={<List/>}/>
           <Route path="product/add" element={<Add/>}/>
+          <Route path="product/edit/:id" element={<Edit/>} />
+
+          <Route path="course" element={<ListCourse/>} />
         </Route>
 
         <Route path="*" element={<h1>Not found</h1>}/>

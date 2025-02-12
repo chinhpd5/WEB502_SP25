@@ -2,6 +2,7 @@ import axios, { AxiosError } from "axios";
 import React, { useEffect, useState } from "react";
 import IProduct from "../../interfaces/product";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 function List() {
   const [products, setProducts] = useState<IProduct[]>([]);
@@ -66,6 +67,8 @@ function List() {
                 <td>{item.category}</td>
                 <td>
                   <button onClick={()=>{handleDelete(item.id)}} className="btn btn-danger">Xóa</button>                  
+                  <Link className="btn btn-warning" to={`edit/${item.id}`}>Sửa</Link>
+                  {/* <Link className="btn btn-warning" to={`/admin/product/edit/${item.id}`}>Sửa</Link> */}
                 </td>
               </tr>
             );
