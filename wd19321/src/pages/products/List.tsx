@@ -2,6 +2,7 @@ import axios, { AxiosError } from "axios";
 import React, { useEffect, useState } from "react";
 import IProduct from "../../interfaces/product";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 function List() {
   const [products, setProducts] = useState<IProduct[]>([]);
@@ -45,6 +46,8 @@ function List() {
   return (
     <div>
       <h1>Danh sách sản phẩm</h1>
+      <Link className="btn btn-primary" to={`add`}>Thêm mới</Link>
+      {/* <Link className="btn btn-primary" to={`/admin/product/add`}>Thêm mới</Link> */}
       <table className="table table-bordered table-striped table-hover">
         <thead>
           <tr>
@@ -69,6 +72,8 @@ function List() {
                 <td>{item.category}</td>
                 <td>
                   <button onClick={()=>{handleDetele(item.id)}} className="btn btn-danger">Xóa</button>
+                  {/* <Link className="btn btn-warning" to={`/admin/product/edit/${item.id}`}>Sửa</Link> */}
+                  <Link className="btn btn-warning" to={`edit/${item.id}`}>Sửa</Link>
                 </td>
               </tr>
             );
