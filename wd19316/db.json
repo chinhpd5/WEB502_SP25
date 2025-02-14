@@ -353,22 +353,30 @@
       "category": "laptops"
     }
   ],
-  "courses":[
+  "courses": [
     {
-      "id":"1",
+      "id": "1",
       "courseName": "JS Cơ bản",
-      "views":20,
-      "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/8/8a/Javascript.jpg",
+      "views": 20,
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Javascript.jpg",
       "note": "none",
-      "category":"Javascript"
+      "category": "Javascript"
     },
     {
-      "id":"2",
-      "courseName": "PHP Cơ bản",
-      "views":29,
-      "thumbnail":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTef5lOqn3-0aRjvM19iJy-lAknXy3vSH1OfA&s",
-      "note":"none",
-      "category":"PHP"
+      "id": "2",
+      "courseName": "PHP Cơ bản update",
+      "views": "29",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTef5lOqn3-0aRjvM19iJy-lAknXy3vSH1OfA&s",
+      "note": "none",
+      "category": "PHP"
+    },
+    {
+      "id": "12b1",
+      "courseName": "khóa học 1",
+      "views": "123",
+      "thumbnail": "https://picsum.photos/200/200",
+      "note": "ghi chú",
+      "category": "Javascript"
     }
   ]
 }
