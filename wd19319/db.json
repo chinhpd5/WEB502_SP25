@@ -343,14 +343,6 @@
       "description": "mô tả",
       "thumbnail": "https://picsum.photos/200/200",
       "category": "laptops"
-    },
-    {
-      "id": "56b7",
-      "title": "a",
-      "price": "123",
-      "thumbnail": "https://picsum.photos/200/200",
-      "description": "mô tả",
-      "category": "laptops"
     }
   ],
   "courses": [
