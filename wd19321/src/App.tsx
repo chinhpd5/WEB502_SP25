@@ -10,6 +10,8 @@ import Add from "./pages/products/Add";
 import { Toaster } from "react-hot-toast";
 import Edit from "./pages/products/Edit";
 import ListCourse from "./pages/courses/ListCourse";
+import AddCourse from "./pages/courses/AddCourse";
+import EditCourse from "./pages/courses/EditCourse";
 
 function App() {
 
@@ -30,7 +32,9 @@ function App() {
           <Route path="product/add" element={<Add/>}/>
           <Route path="product/edit/:id" element={<Edit/>} />
         
-          <Route path="course" element={<ListCourse/>}/>
+          <Route path="course" element={<ListCourse/>} />
+          <Route path="course/add" element={<AddCourse/>} />
+          <Route path="course/edit/:id" element={<EditCourse/>} />
         </Route>
 
         <Route path="*" element={<h1>Not found</h1>}/>

@@ -337,22 +337,30 @@
       "thumbnail": "https://cdn.hoanghamobile.com/Uploads/2024/08/14/bluetooth-sounarc-p2.png;trim.threshold=80;trim.percentpadding=0.5;width=240;height=240;mode=pad;paddingWidth=5;"
     }
   ],
-  "courses":[
+  "courses": [
     {
-      "id":"1",
+      "id": "1",
       "courseName": "JS Cơ bản",
-      "views":20,
-      "thumbnail":"https://upload.wikimedia.org/wikipedia/commons/8/8a/Javascript.jpg",
+      "views": 20,
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Javascript.jpg",
       "note": "none",
-      "category":"Javascript"
+      "category": "Javascript"
     },
     {
-      "id":"2",
+      "id": "2",
       "courseName": "PHP Cơ bản",
-      "views":29,
-      "thumbnail":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTef5lOqn3-0aRjvM19iJy-lAknXy3vSH1OfA&s",
-      "note":"none",
-      "category":"PHP"
+      "views": 29,
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTef5lOqn3-0aRjvM19iJy-lAknXy3vSH1OfA&s",
+      "note": "none",
+      "category": "PHP"
+    },
+    {
+      "id": "5438",
+      "courseName": "khóa học 1 update",
+      "views": "1000",
+      "thumbnail": "https://picsum.photos/200/200",
+      "note": "ghi chú",
+      "category": "C++"
     }
   ]
 }
