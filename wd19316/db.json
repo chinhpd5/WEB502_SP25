@@ -379,5 +379,18 @@
       "category": "Javascript"
     }
   ],
-  "users": []
+  "users": [
+    {
+      "email": "chinhpd5@fpt.com.vn",
+      "password": "$2a$10$7rcnXpUcg0aPvU3zq5W8D.2pAy1BR9V1s1rEUMtrYDVAuDN.A6FC6",
+      "username": "admin",
+      "id": 1
+    },
+    {
+      "email": "chinhpd6@fpt.com.vn",
+      "password": "$2a$10$Q87Te/GgEjGUuw6I.M.YcO/ee1U9rQQVF4NmIoubABRXgZ.S5Y5vG",
+      "username": "admin",
+      "id": 2
+    }
+  ]
 }
