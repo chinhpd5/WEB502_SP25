@@ -373,12 +373,16 @@
   ],
   "users": [
     {
+      "year": "2004-06-20",
+      "gender": "male",
       "email": "chinhpd5@fpt.edu.vn",
       "password": "$2a$10$24zfo6QIQrgXP5pIMTbxYOUUpP9BGtGXZZhpnBYSyv/k1OY8XyVXu",
       "username": "admin",
       "id": 1
     },
     {
+      "year": "2004-10-30",
+      "gender": "female",
       "email": "chinhpd51@fpt.edu.vn",
       "password": "$2a$10$m86I0BaxLW/7brmf4eZr8emxi7Ba.jEI81z/ShopuXfCCb7VWPeP2",
       "username": "admin",
