@@ -3,6 +3,7 @@ import { IRegister } from "../interfaces/user";
 import { useForm } from "react-hook-form";
 import axios, { AxiosError } from "axios";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 function Register() {
   const {
@@ -30,6 +31,7 @@ function Register() {
   return (
     <div>
       <h1>Đăng ký</h1>
+      <Link className="btn btn-primary" to={'/login'}>Đăng nhập</Link>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-3">
           <label htmlFor="username" className="form-label">

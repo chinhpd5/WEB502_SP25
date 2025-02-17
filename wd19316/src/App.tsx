@@ -12,6 +12,7 @@ import ListCourse from "./pages/courses/ListCourse";
 import AddCourse from "./pages/courses/AddCourse";
 import EditCourse from "./pages/courses/EditCourse";
 import Register from "./pages/Register";
+import Login from "./pages/Login";
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="news" element={<h1>Tin tức</h1>} />
 
           <Route path="register" element={<Register/>} />
+          <Route path="login" element={<Login/>} />
         </Route>
 
         <Route path="/admin" element={<AdminLayout/>}>
