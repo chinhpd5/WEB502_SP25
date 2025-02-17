@@ -9,6 +9,7 @@ import LayoutAdmin from "./pages/layouts/LayoutAdmin";
 import { Toaster } from "react-hot-toast";
 import Edit from "./pages/product/Edit";
 import Register from "./pages/Register";
+import Login from "./pages/Login";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="news" element={<h1>Tin tức</h1>}/>
           <Route path="about" element={<h1>About</h1>}/>
           <Route path="register" element={<Register/>}/>
+          <Route path="login" element={<Login/>}/>
         </Route>
 
         <Route path="/admin" element={<LayoutAdmin/>}>

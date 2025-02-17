@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { Register as ResgiterInput } from "../interfaces/user";
 import axios, { Axios, AxiosError } from "axios";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 function Register() {
   const {
@@ -11,13 +12,15 @@ function Register() {
     formState:{errors},
     watch
   } = useForm<ResgiterInput>();
+  const navigate = useNavigate()
 
   const onSubmit = async (data: ResgiterInput) =>{
     // console.log(data);
     try {
       data.confirmPassword = undefined;
       await axios.post(`http://localhost:3000/register`,data)
-      toast.success("Đăng ký thành công")
+      toast.success("Đăng ký thành công");
+      navigate('/login')
     } catch (error: any) {
       // console.log(error);
       // toast.error((error as AxiosError)?.response?.data as string)
