@@ -4,3 +4,8 @@ export interface IRegster {
   password: string
   confirmPassword: string | undefined
 }
+
+export interface ILogin {
+  email: string
+  password: string
+}
