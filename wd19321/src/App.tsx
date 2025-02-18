@@ -12,6 +12,7 @@ import Edit from "./pages/products/Edit";
 import ListCourse from "./pages/courses/ListCourse";
 import AddCourse from "./pages/courses/AddCourse";
 import EditCourse from "./pages/courses/EditCourse";
+import Register from "./pages/Register";
 
 function App() {
 
@@ -25,6 +26,8 @@ function App() {
           <Route path='product/:id' element={<ProductDetail/>}/>
           <Route path='news' element={<h1>Tin tức</h1>}/>
           <Route path='contact' element={<h1>Liên hệ</h1>}/>
+
+          <Route path="register" element={<Register/>} />
         </Route>
 
         <Route path="/admin" element={<AdminLayout/>}>

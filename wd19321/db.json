@@ -362,5 +362,13 @@
       "note": "ghi chú",
       "category": "C++"
     }
+  ],
+  "users": [
+    {
+      "email": "chinhpd5@fpt.edu.vn",
+      "password": "$2a$10$F1ElnN3zaNW/SO3l1gkBnupOYW.nc.oDOm1Sg8sES1Uv4WejutG7W",
+      "username": "admin",
+      "id": 1
+    }
   ]
 }
