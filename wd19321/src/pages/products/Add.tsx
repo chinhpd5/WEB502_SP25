@@ -4,6 +4,7 @@ import axios, { AxiosError } from "axios";
 import toast from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import instance from "../../config/axiosConfig";
 
 // const productInit: ProductInput = {
 //   title:'',
@@ -47,7 +48,7 @@ function Add() {
   const onSubmit = async (data:ProductInput) =>{
     // console.log(data);
     try {
-      await axios.post(`http://localhost:3000/products`,data);
+      await instance.post(`/products`,data);
       toast.success("Thêm thành công")
       navigate('/admin/product')
     } catch (error) {

@@ -335,6 +335,14 @@
       "brand": "Golden",
       "category": "home-decoration",
       "thumbnail": "https://cdn.hoanghamobile.com/Uploads/2024/08/14/bluetooth-sounarc-p2.png;trim.threshold=80;trim.percentpadding=0.5;width=240;height=240;mode=pad;paddingWidth=5;"
+    },
+    {
+      "title": "abc",
+      "price": "123",
+      "thumbnail": "https://picsum.photos/200/200",
+      "description": "mô tả",
+      "category": "laptops",
+      "id": "IDtQlI5"
     }
   ],
   "courses": [
