@@ -1,4 +1,4 @@
-import axios, { AxiosError } from "axios";
+import axios, { Axios, AxiosError } from "axios";
 import React, { useEffect, useState } from "react";
 import IProduct from "../../interfaces/product";
 import toast from "react-hot-toast";
